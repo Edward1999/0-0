@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Edward loves Lily</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+		
+			<span class="comments">//2014—10-6,</span><br />
+			Boy name = <span class="keyword">Edward</span> Ma;<br />
+			Girl name = <span class="keyword">Lily</span> Wang;<br />
+			<span class="comments">// They meet each other for the first time. <span class="keyword">@jiaoke foundation</span></span><br />
+			They didn't even know each other at this moment.<br/>
+			<span class="comments">// AS time goes on,</span><br />
+			They fell in love.<br/>
+			<span class="comments">/**The boy loves the girl;<br />
+			The girl loves the boy;*/<br /></span>
+	
+			<BR/>
+			<span class="comments">//AS time goes by,<br /></span>
+			<span class="placeholder"/><span class="comments">// Edward had a dream,</span><br />
+			He wanted <span class="keyword"> Lily </span> to be with him for the rest of his life<br />
+			
+			
+			<BR/>
+			<span class="comments">//2015-3-8,</span><br />
+			Edward confessed his love to Lily <br />
+			<span class="placeholder"/><span class="comments">// But</span><span class="keyword"> Failure</span><span class="comments"> error ######</span><br />
+			 
+			<BR/>
+			<span class="comments">//2015-7-21,</span><br />
+			With Edward's  <span class="keyword"> CONTINUOUS & SUSTAINED </span>efforts</span><br />
+			They finally became a couple!!</span><br />
+			
+			<BR/>
+			<span class="keyword">Edward</span> is very <span class="keyword">happy</span>;<br />
+			<span class="keyword">Lily</span> is very <span class="keyword">happy, too</span>;<br />
+			<span class="placeholder"/><span class="comments">// <span class="keyword">NO MATTER </span>it is RIGHT or WRONG</span><br />
+			<span class="placeholder"/><span class="comments">// <span class="keyword">NO MATTER </span>it is going to be GOOD or BAD</span><br />
+			Edward can not live without Lily<br />
+			<br>
+			<br>
+			I want to say:<br />
+			倩倩, I love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					This is how long we have been <span class="keyword">TOGETHER</span>
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I love U Forever<br/>
+					<div class="signature">- EDWARD</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2015, 6, 21);
+together.setHours(9);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
